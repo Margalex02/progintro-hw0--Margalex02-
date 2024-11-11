@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 int main() {
-    long long left, right;  // Δημιουργούμε δύο μεταβλητές για τα κόστη κατεύθυνσης
-    int result;  // Μεταβλητή για την αποθήκευση του αποτελέσματος της scanf
+    long long left, right;
+    int result;
 
     // Διαβάζουμε τις τιμές μέχρι να φτάσουμε στο τέλος του αρχείου (EOF)
     while (1) {
         // Ζητάμε την αριστερή τιμή από τον χρήστη
         printf("Please enter the cost of going left: ");
-        result = scanf("%lld", &left);  // Διαβάζουμε το κόστος για το "left"
+        result = scanf("%lld", &left);
 
-        // Έλεγχος για EOF ή εσφαλμένη είσοδο
+        // Έλεγχος για EOF ή λάθος είσοδο
         if (result == EOF) {
             return 0;  // Αν συναντήσουμε EOF, τερματίζουμε με κωδικό εξόδου 0
         } else if (result != 1) {
@@ -20,13 +20,13 @@ int main() {
 
         // Ζητάμε τη δεξιά τιμή από τον χρήστη
         printf("Please enter the cost of going right: ");
-        result = scanf("%lld", &right);  // Διαβάζουμε το κόστος για το "right"
+        result = scanf("%lld", &right);
 
-        // Έλεγχος για EOF ή εσφαλμένη είσοδο
+        // Έλεγχος για EOF ή λάθος είσοδο
         if (result == EOF) {
             return 0;  // Τερματισμός με κωδικό εξόδου 0 αν φτάσουμε σε EOF
         } else if (result != 1) {
-            return 1;  // Τερματισμός με κωδικό εξόδου 1 αν η είσοδος είναι εσφαλμένη
+            return 1;  // Τερματισμός με κωδικό εξόδου 1 αν η είσοδος είναι λάθος
         }
 
         // Σύγκριση των τιμών και απόφαση για την κατεύθυνση
